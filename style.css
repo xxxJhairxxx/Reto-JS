@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    list-style: none;
+}
+
+body{
+    background: hsl(226, 43%, 10%);
+}
+
+.container{
+    width: 95%;
+    max-width: 1000px;
+    margin: 4% auto;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "user   work      play    study"
+                         "user   exercise  social  selfcare";
+
+}
+.user{ background: hsl(235, 46%, 20%);
+    grid-area: user;
+    border-radius: 10px;
+}
+.user section{
+    border-radius: 15px;
+    padding:20px;
+    background-color: hsl(246, 80%, 60%);
+    padding-bottom: 60px;
+}
+.user section img{
+    width: 60px;
+    border-radius: 50%;
+    border:#fff solid 3px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.user section p{
+    font-size: 12px;
+    color: rgb(200, 198, 198);
+}
+
+.user section h2{
+    font-size: 40px;
+}
+
+.user ul{
+    padding: 10px 20px;
+}
+
+.user ul li{
+font-size: 14px;
+font-weight: 400;
+margin: 20px 0;
+color: hsl(235, 45%, 61%)
+}
+
+.content{
+    font-weight: 500;
+    border-radius: 15px;
+overflow: hidden;}
+
+.content .descripcion{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    margin-top: -22px;
+    padding: 20px;
+    position: relative;
+    z-index: 3;
+}
+
+.content .descripcion .menu{
+    display: flex;
+    justify-content: space-between;
+}
+.content .descripcion .menu p{
+    font-size: 15px;
+    font-weight: 400;
+    margin: 12px 0;
+    color: #fff;
+}
+
+
+
+.content .descripcion h2{
+    font-size: 40px;
+    margin: 10px auto;
+}
+
+.content .descripcion p{
+    font-size: 13px;
+    font-weight: 400;
+    margin: 12px 0;
+    color: hsl(236, 100%, 87%);
+}
+
+.content .portada{
+    display: flex;
+    position: relative;
+    height: 70px;
+    justify-content: end;
+    border-radius: 15px 15px 0 0;
+    z-index: 1;
+}
+
+.content .portada svg{
+    margin: -12px 20px 0 0;
+}
+
+.content .color-exercise svg{
+    margin: 0 20px 0 0;
+}
+
+
+.work{grid-area: work;}
+.play{grid-area: play;}
+.study{grid-area: study;}
+.social{grid-area: social;}
+.exercise{grid-area: exercise;}
+.selfcare{grid-area: selfcare;}
+
+.color-work{background-color: hsl(15, 100%, 70%)}
+.color-play{background-color: hsl(195, 74%, 62%)}
+.color-study{background-color: hsl(348, 100%, 68%)}
+.color-social{background-color: hsl(264, 64%, 52%)}
+.color-exercise{background-color: hsl(145, 58%, 55%)}
+.color-selfcare{background-color: hsl(43, 84%, 65%)}
+
+/* EFECTOS HOVER*/
+.user ul li:hover{
+ color: #fff;
+ cursor: pointer;
+}
+
+.content .descripcion:hover{
+    background-color: #34397b;
+    cursor: pointer;
+}
+
+
+@media (max-width:764px) {
+    .container{
+        width: 95%;
+        margin: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "user"
+                             "work"
+                             "play"
+                             "study"
+                             "exercise"
+                             "social"
+                             "selfcare";
+    
+    }
+
+
+    .user section{
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        padding:40px 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user section img{
+        width: 70px;
+        margin-bottom: 1%;
+    }
+
+    .user section .user-name{
+        margin-left: 6%;
+    }
+    
+    .user section p{
+        font-size: 22px;
+        color: rgb(200, 198, 198);
+    }
+    
+    .user section h2{
+        font-size: 40px;
+    }
+
+    .user ul{
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 10%;
+    }
+    
+    .user ul li{font-size: 20px;}
+
+    .content .descripcion .hour{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .content .descripcion h2{
+        margin: 0;
+    }
+
+    .content .descripcion p{
+        margin: 0;
+        font-size: 17px;
+    }
+}
